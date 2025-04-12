@@ -42,7 +42,7 @@ while opcao != 7:
                 print(f"Código: {m[0]} | Tipo: {m[1].capitalize()} | Título: {m[2]} | Descrição: {m[3]}")
 
     elif opcao == 2:
-        tipo = input("Digite o tipo de manifestação (reclamação, sugestão ou elo-gio): ").strip().lower()
+        tipo = input("Digite o tipo de manifestação (reclamação, sugestão ou elogio): ").strip().lower()
         cursor.execute("SELECT * FROM manifestacoes WHERE tipo = %s", (tipo,)) # Me dê todas as colunas da tabela manifestações onde o tipo for igual a placeholder str
         manifestacoes = cursor.fetchall()
         if not manifestacoes:
